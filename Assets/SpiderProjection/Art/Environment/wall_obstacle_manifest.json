@@ -1,0 +1,180 @@
+{
+  "schema": "spider-projection.environment-library.v1",
+  "cell_size_px": [
+    128,
+    128
+  ],
+  "pixels_per_unit": 32,
+  "atlas": "wall_obstacle_atlas.png",
+  "entries": [
+    {
+      "name": "frame_0",
+      "file": "frame_0.png",
+      "atlas_rect_top_left_px": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "frame_1",
+      "file": "frame_1.png",
+      "atlas_rect_top_left_px": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "frame_2",
+      "file": "frame_2.png",
+      "atlas_rect_top_left_px": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "frame_3",
+      "file": "frame_3.png",
+      "atlas_rect_top_left_px": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "shelf_short",
+      "file": "shelf_short.png",
+      "atlas_rect_top_left_px": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "shelf_long",
+      "file": "shelf_long.png",
+      "atlas_rect_top_left_px": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "shelf_books",
+      "file": "shelf_books.png",
+      "atlas_rect_top_left_px": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "wall_vent",
+      "file": "wall_vent.png",
+      "atlas_rect_top_left_px": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "speaker",
+      "file": "speaker.png",
+      "atlas_rect_top_left_px": [
+        0,
+        256,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "plant",
+      "file": "plant.png",
+      "atlas_rect_top_left_px": [
+        128,
+        256,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "clock",
+      "file": "clock.png",
+      "atlas_rect_top_left_px": [
+        256,
+        256,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "wall_hook",
+      "file": "wall_hook.png",
+      "atlas_rect_top_left_px": [
+        384,
+        256,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "window",
+      "file": "window.png",
+      "atlas_rect_top_left_px": [
+        0,
+        384,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    },
+    {
+      "name": "cabinet",
+      "file": "cabinet.png",
+      "atlas_rect_top_left_px": [
+        128,
+        384,
+        128,
+        128
+      ],
+      "suggested_collider": "BoxCollider2D",
+      "is_web_anchor_surface": true
+    }
+  ],
+  "note": "These visible props are demo stand-ins. Projection-mapped real frames/shelves should use invisible Collider2D geometry and WebAnchor2D components."
+}

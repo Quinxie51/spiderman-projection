@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f73ab122a9a4bbebe0ef800740a649, type: 3}
+  m_Name: PlayerTuning
+  m_EditorClassIdentifier: SpiderProjection.Runtime::SpiderProjection.Runtime.PlayerTuning
+  runSpeed: 7
+  groundAcceleration: 52
+  groundDeceleration: 64
+  airAcceleration: 30
+  jumpSpeed: 11
+  coyoteTime: 0.12
+  jumpBufferTime: 0.12
+  normalGravityScale: 3.5
+  jumpCutGravityScale: 5.5
+  maxFallSpeed: 18
+  apexThreshold: 0.6
+  hardLandingSpeed: 13
+  rollSpeed: 9
+  rollDuration: 0.43
+  skidThreshold: 5.5
+  swingSearchRadius: 8
+  swingMinRopeLength: 1.4
+  swingMaxRopeLength: 8.5
+  swingPumpForce: 18
+  swingReelSpeed: 2.4
+  swingReleaseBoost: 1.25
+  wallCrawlSpeed: 3
+  wallSlideSpeed: 2.5
+  wallJumpHorizontalSpeed: 7.5
+  ledgeClimbDuration: 0.25
+  groundProbeSize: {x: 0.55, y: 0.12}
+  wallProbeSize: {x: 0.12, y: 0.8}
+  ledgeProbeSize: {x: 0.12, y: 0.2}

@@ -1,0 +1,1630 @@
+{
+  "schema": "spider-projection.sprite-library.v1",
+  "character": "Crimson Crawler",
+  "frame_size_px": [
+    64,
+    64
+  ],
+  "pixels_per_unit": 32,
+  "pivot_normalized": [
+    0.5,
+    0.32
+  ],
+  "filter_mode": "Point",
+  "compression": "None",
+  "wrap_mode": "Clamp",
+  "animations": [
+    {
+      "name": "idle",
+      "frames": 6,
+      "fps": 8,
+      "loop": true,
+      "strip": "crimson_crawler_idle.png",
+      "unity_state": "Idle",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 0,
+          "rect_top_left_px": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            640,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 1,
+          "rect_top_left_px": [
+            64,
+            0,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            640,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 2,
+          "rect_top_left_px": [
+            128,
+            0,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            640,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 3,
+          "rect_top_left_px": [
+            192,
+            0,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            640,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 4,
+          "atlas_index": 4,
+          "rect_top_left_px": [
+            256,
+            0,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            640,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 5,
+          "atlas_index": 5,
+          "rect_top_left_px": [
+            320,
+            0,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            640,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "run",
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "strip": "crimson_crawler_run.png",
+      "unity_state": "Run",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 6,
+          "rect_top_left_px": [
+            384,
+            0,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            640,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 7,
+          "rect_top_left_px": [
+            448,
+            0,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            640,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 8,
+          "rect_top_left_px": [
+            0,
+            64,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            576,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 9,
+          "rect_top_left_px": [
+            64,
+            64,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            576,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 4,
+          "atlas_index": 10,
+          "rect_top_left_px": [
+            128,
+            64,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            576,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 5,
+          "atlas_index": 11,
+          "rect_top_left_px": [
+            192,
+            64,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            576,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 6,
+          "atlas_index": 12,
+          "rect_top_left_px": [
+            256,
+            64,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            576,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 7,
+          "atlas_index": 13,
+          "rect_top_left_px": [
+            320,
+            64,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            576,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "crouch",
+      "frames": 2,
+      "fps": 6,
+      "loop": true,
+      "strip": "crimson_crawler_crouch.png",
+      "unity_state": "Crouch",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 14,
+          "rect_top_left_px": [
+            384,
+            64,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            576,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 15,
+          "rect_top_left_px": [
+            448,
+            64,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            576,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jump_start",
+      "frames": 3,
+      "fps": 12,
+      "loop": false,
+      "strip": "crimson_crawler_jump_start.png",
+      "unity_state": "JumpStart",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 16,
+          "rect_top_left_px": [
+            0,
+            128,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            512,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 17,
+          "rect_top_left_px": [
+            64,
+            128,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            512,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 18,
+          "rect_top_left_px": [
+            128,
+            128,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            512,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "jump_rise",
+      "frames": 3,
+      "fps": 10,
+      "loop": false,
+      "strip": "crimson_crawler_jump_rise.png",
+      "unity_state": "JumpRise",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 19,
+          "rect_top_left_px": [
+            192,
+            128,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            512,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 20,
+          "rect_top_left_px": [
+            256,
+            128,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            512,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 21,
+          "rect_top_left_px": [
+            320,
+            128,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            512,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "apex",
+      "frames": 2,
+      "fps": 6,
+      "loop": true,
+      "strip": "crimson_crawler_apex.png",
+      "unity_state": "Apex",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 22,
+          "rect_top_left_px": [
+            384,
+            128,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            512,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 23,
+          "rect_top_left_px": [
+            448,
+            128,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            512,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fall",
+      "frames": 3,
+      "fps": 8,
+      "loop": true,
+      "strip": "crimson_crawler_fall.png",
+      "unity_state": "Fall",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 24,
+          "rect_top_left_px": [
+            0,
+            192,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            448,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 25,
+          "rect_top_left_px": [
+            64,
+            192,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            448,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 26,
+          "rect_top_left_px": [
+            128,
+            192,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            448,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "land",
+      "frames": 4,
+      "fps": 12,
+      "loop": false,
+      "strip": "crimson_crawler_land.png",
+      "unity_state": "Land",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 27,
+          "rect_top_left_px": [
+            192,
+            192,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            448,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 28,
+          "rect_top_left_px": [
+            256,
+            192,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            448,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 29,
+          "rect_top_left_px": [
+            320,
+            192,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            448,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 30,
+          "rect_top_left_px": [
+            384,
+            192,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            448,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "roll",
+      "frames": 6,
+      "fps": 14,
+      "loop": false,
+      "strip": "crimson_crawler_roll.png",
+      "unity_state": "Roll",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 31,
+          "rect_top_left_px": [
+            448,
+            192,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            448,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 32,
+          "rect_top_left_px": [
+            0,
+            256,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            384,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 33,
+          "rect_top_left_px": [
+            64,
+            256,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            384,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 34,
+          "rect_top_left_px": [
+            128,
+            256,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            384,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 4,
+          "atlas_index": 35,
+          "rect_top_left_px": [
+            192,
+            256,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            384,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 5,
+          "atlas_index": 36,
+          "rect_top_left_px": [
+            256,
+            256,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            384,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "web_shoot",
+      "frames": 4,
+      "fps": 12,
+      "loop": false,
+      "strip": "crimson_crawler_web_shoot.png",
+      "unity_state": "WebShoot",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 37,
+          "rect_top_left_px": [
+            320,
+            256,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            384,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 38,
+          "rect_top_left_px": [
+            384,
+            256,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            384,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 39,
+          "rect_top_left_px": [
+            448,
+            256,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            384,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 40,
+          "rect_top_left_px": [
+            0,
+            320,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            320,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "swing_attach",
+      "frames": 3,
+      "fps": 12,
+      "loop": false,
+      "strip": "crimson_crawler_swing_attach.png",
+      "unity_state": "SwingAttach",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 41,
+          "rect_top_left_px": [
+            64,
+            320,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            320,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 42,
+          "rect_top_left_px": [
+            128,
+            320,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            320,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 43,
+          "rect_top_left_px": [
+            192,
+            320,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            320,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "swing_loop",
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "strip": "crimson_crawler_swing_loop.png",
+      "unity_state": "SwingLoop",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 44,
+          "rect_top_left_px": [
+            256,
+            320,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            320,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 45,
+          "rect_top_left_px": [
+            320,
+            320,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            320,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 46,
+          "rect_top_left_px": [
+            384,
+            320,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            320,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 47,
+          "rect_top_left_px": [
+            448,
+            320,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            320,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 4,
+          "atlas_index": 48,
+          "rect_top_left_px": [
+            0,
+            384,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 5,
+          "atlas_index": 49,
+          "rect_top_left_px": [
+            64,
+            384,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 6,
+          "atlas_index": 50,
+          "rect_top_left_px": [
+            128,
+            384,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 7,
+          "atlas_index": 51,
+          "rect_top_left_px": [
+            192,
+            384,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            256,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "swing_release",
+      "frames": 3,
+      "fps": 12,
+      "loop": false,
+      "strip": "crimson_crawler_swing_release.png",
+      "unity_state": "SwingRelease",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 52,
+          "rect_top_left_px": [
+            256,
+            384,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 53,
+          "rect_top_left_px": [
+            320,
+            384,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 54,
+          "rect_top_left_px": [
+            384,
+            384,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            256,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wall_cling",
+      "frames": 2,
+      "fps": 6,
+      "loop": true,
+      "strip": "crimson_crawler_wall_cling.png",
+      "unity_state": "WallCling",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 55,
+          "rect_top_left_px": [
+            448,
+            384,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            256,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 56,
+          "rect_top_left_px": [
+            0,
+            448,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            192,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wall_crawl",
+      "frames": 6,
+      "fps": 10,
+      "loop": true,
+      "strip": "crimson_crawler_wall_crawl.png",
+      "unity_state": "WallCrawl",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 57,
+          "rect_top_left_px": [
+            64,
+            448,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 58,
+          "rect_top_left_px": [
+            128,
+            448,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 59,
+          "rect_top_left_px": [
+            192,
+            448,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 60,
+          "rect_top_left_px": [
+            256,
+            448,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 4,
+          "atlas_index": 61,
+          "rect_top_left_px": [
+            320,
+            448,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 5,
+          "atlas_index": 62,
+          "rect_top_left_px": [
+            384,
+            448,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            192,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ledge_grab",
+      "frames": 2,
+      "fps": 6,
+      "loop": true,
+      "strip": "crimson_crawler_ledge_grab.png",
+      "unity_state": "LedgeGrab",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 63,
+          "rect_top_left_px": [
+            448,
+            448,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            192,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 64,
+          "rect_top_left_px": [
+            0,
+            512,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            128,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ledge_climb",
+      "frames": 5,
+      "fps": 10,
+      "loop": false,
+      "strip": "crimson_crawler_ledge_climb.png",
+      "unity_state": "LedgeClimb",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 65,
+          "rect_top_left_px": [
+            64,
+            512,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 66,
+          "rect_top_left_px": [
+            128,
+            512,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 67,
+          "rect_top_left_px": [
+            192,
+            512,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 68,
+          "rect_top_left_px": [
+            256,
+            512,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 4,
+          "atlas_index": 69,
+          "rect_top_left_px": [
+            320,
+            512,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            128,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "skid",
+      "frames": 4,
+      "fps": 12,
+      "loop": false,
+      "strip": "crimson_crawler_skid.png",
+      "unity_state": "Skid",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 70,
+          "rect_top_left_px": [
+            384,
+            512,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 71,
+          "rect_top_left_px": [
+            448,
+            512,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            128,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 72,
+          "rect_top_left_px": [
+            0,
+            576,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 73,
+          "rect_top_left_px": [
+            64,
+            576,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            64,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hurt",
+      "frames": 3,
+      "fps": 10,
+      "loop": false,
+      "strip": "crimson_crawler_hurt.png",
+      "unity_state": "Hurt",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 74,
+          "rect_top_left_px": [
+            128,
+            576,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 75,
+          "rect_top_left_px": [
+            192,
+            576,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 76,
+          "rect_top_left_px": [
+            256,
+            576,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            64,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "defeat",
+      "frames": 4,
+      "fps": 8,
+      "loop": false,
+      "strip": "crimson_crawler_defeat.png",
+      "unity_state": "Defeat",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 77,
+          "rect_top_left_px": [
+            320,
+            576,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 78,
+          "rect_top_left_px": [
+            384,
+            576,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 79,
+          "rect_top_left_px": [
+            448,
+            576,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            448,
+            64,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 80,
+          "rect_top_left_px": [
+            0,
+            640,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            0,
+            0,
+            64,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "name": "celebrate",
+      "frames": 6,
+      "fps": 8,
+      "loop": true,
+      "strip": "crimson_crawler_celebrate.png",
+      "unity_state": "Celebrate",
+      "atlas_frames": [
+        {
+          "frame": 0,
+          "atlas_index": 81,
+          "rect_top_left_px": [
+            64,
+            640,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            64,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 1,
+          "atlas_index": 82,
+          "rect_top_left_px": [
+            128,
+            640,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            128,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 2,
+          "atlas_index": 83,
+          "rect_top_left_px": [
+            192,
+            640,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            192,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 3,
+          "atlas_index": 84,
+          "rect_top_left_px": [
+            256,
+            640,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            256,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 4,
+          "atlas_index": 85,
+          "rect_top_left_px": [
+            320,
+            640,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            320,
+            0,
+            64,
+            64
+          ]
+        },
+        {
+          "frame": 5,
+          "atlas_index": 86,
+          "rect_top_left_px": [
+            384,
+            640,
+            64,
+            64
+          ],
+          "rect_unity_bottom_left_px": [
+            384,
+            0,
+            64,
+            64
+          ]
+        }
+      ]
+    }
+  ],
+  "atlas": {
+    "file": "crimson_crawler_atlas.png",
+    "columns": 8,
+    "rows": 11,
+    "size_px": [
+      512,
+      704
+    ],
+    "total_frames": 87
+  }
+}

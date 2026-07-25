@@ -1,0 +1,20 @@
+{
+  "name": "SpiderProjection.Tests.PlayMode",
+  "rootNamespace": "SpiderProjection.Tests.PlayMode",
+  "references": [
+    "SpiderProjection.Runtime",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

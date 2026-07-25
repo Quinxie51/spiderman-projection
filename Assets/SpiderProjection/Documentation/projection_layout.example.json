@@ -1,0 +1,80 @@
+{
+  "schema": "spider-projection.layout.v1",
+  "name": "Example Wall - Replace With Measured Values",
+  "output": {
+    "width_px": 1920,
+    "height_px": 1080,
+    "display_index": 0,
+    "full_screen": true,
+    "orthographic_size": 5.4,
+    "clear_color": "#000000",
+    "corner_pin_normalized": {
+      "bottom_left": [0.0, 0.0],
+      "bottom_right": [1.0, 0.0],
+      "top_right": [1.0, 1.0],
+      "top_left": [0.0, 1.0]
+    }
+  },
+  "coordinate_system": {
+    "origin": "bottom-left",
+    "units": "normalized 0..1 during calibration; convert to orthographic world coordinates at load"
+  },
+  "surfaces": [
+    {
+      "id": "floor",
+      "kind": "Ground",
+      "rect_normalized": [0.0, 0.0, 1.0, 0.035],
+      "landable": true,
+      "one_way": false,
+      "web_attachable": false,
+      "visible_sprite": null
+    },
+    {
+      "id": "frame_left",
+      "kind": "PictureFrame",
+      "rect_normalized": [0.10, 0.56, 0.18, 0.24],
+      "landable": true,
+      "one_way": true,
+      "web_attachable": true,
+      "visible_sprite": "frame_0.png",
+      "anchor_mode": "corners-and-top-edge"
+    },
+    {
+      "id": "frame_center",
+      "kind": "PictureFrame",
+      "rect_normalized": [0.40, 0.67, 0.20, 0.23],
+      "landable": true,
+      "one_way": true,
+      "web_attachable": true,
+      "visible_sprite": "frame_1.png",
+      "anchor_mode": "corners-and-top-edge"
+    },
+    {
+      "id": "frame_right",
+      "kind": "PictureFrame",
+      "rect_normalized": [0.72, 0.50, 0.18, 0.27],
+      "landable": true,
+      "one_way": true,
+      "web_attachable": true,
+      "visible_sprite": "frame_2.png",
+      "anchor_mode": "corners-and-top-edge"
+    },
+    {
+      "id": "shelf",
+      "kind": "Shelf",
+      "rect_normalized": [0.23, 0.32, 0.38, 0.045],
+      "landable": true,
+      "one_way": true,
+      "web_attachable": true,
+      "visible_sprite": "shelf_long.png",
+      "anchor_mode": "left-center-right"
+    }
+  ],
+  "calibration_sequence": [
+    "Project projection_calibration_1920x1080.png and align the projector or corner pin.",
+    "Enter surface edit mode and drag collider handles to the measured real frame/shelf edges.",
+    "Toggle visible demo sprites off so only invisible colliders remain for the real installation.",
+    "Run the anchor debug overlay and verify every candidate line terminates on a real object.",
+    "Save a machine-specific copy outside source control if projector position changes frequently."
+  ]
+}

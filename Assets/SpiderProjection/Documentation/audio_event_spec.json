@@ -1,0 +1,63 @@
+{
+  "schema": "spider-projection.audio-events.v1",
+  "music": {
+    "ProjectionIdle": { "file": "../Audio/Music/music_projection_idle.wav", "loop": true, "crossfade_seconds": 1.0 },
+    "Action": { "file": "../Audio/Music/music_wallcrawler_action.wav", "loop": true, "crossfade_seconds": 0.35 },
+    "Victory": { "file": "../Audio/Music/music_victory_stinger.wav", "loop": false, "crossfade_seconds": 0.15 }
+  },
+  "events": {
+    "FootstepWood": {
+      "files": [
+        "../Audio/SFX/sfx_footstep_wood_01.wav",
+        "../Audio/SFX/sfx_footstep_wood_02.wav",
+        "../Audio/SFX/sfx_footstep_wood_03.wav",
+        "../Audio/SFX/sfx_footstep_wood_04.wav"
+      ],
+      "volume_range": [0.82, 0.95],
+      "pitch_range": [0.96, 1.04]
+    },
+    "Jump": { "files": ["../Audio/SFX/sfx_jump.wav"] },
+    "LandSoft": { "files": ["../Audio/SFX/sfx_land_soft.wav"] },
+    "LandHard": { "files": ["../Audio/SFX/sfx_land_hard.wav"] },
+    "Roll": { "files": ["../Audio/SFX/sfx_roll.wav"] },
+    "Skid": { "files": ["../Audio/SFX/sfx_skid.wav"] },
+    "WallCrawl": { "files": ["../Audio/SFX/sfx_wall_crawl.wav"], "loop": true, "volume": 0.52 },
+    "LedgeGrab": { "files": ["../Audio/SFX/sfx_ledge_grab.wav"] },
+    "WebShoot": {
+      "files": [
+        "../Audio/SFX/sfx_web_shoot_01.wav",
+        "../Audio/SFX/sfx_web_shoot_02.wav",
+        "../Audio/SFX/sfx_web_shoot_03.wav"
+      ],
+      "pitch_range": [0.97, 1.03]
+    },
+    "WebAttachWall": { "files": ["../Audio/SFX/sfx_web_attach_wall.wav"] },
+    "WebAttachWood": { "files": ["../Audio/SFX/sfx_web_attach_wood.wav"] },
+    "WebAttachMetal": { "files": ["../Audio/SFX/sfx_web_attach_metal.wav"] },
+    "WebTension": { "files": ["../Audio/SFX/sfx_web_tension.wav"], "cooldown_seconds": 0.75 },
+    "WebRelease": { "files": ["../Audio/SFX/sfx_web_release.wav"] },
+    "SwingWhoosh": {
+      "files": [
+        "../Audio/SFX/sfx_swing_whoosh_01.wav",
+        "../Audio/SFX/sfx_swing_whoosh_02.wav",
+        "../Audio/SFX/sfx_swing_whoosh_03.wav"
+      ],
+      "minimum_speed": 5.0,
+      "cooldown_seconds": 0.4
+    },
+    "Hurt": { "files": ["../Audio/SFX/sfx_hurt.wav"] },
+    "SpiderSense": { "files": ["../Audio/SFX/sfx_spider_sense.wav"] },
+    "Checkpoint": { "files": ["../Audio/SFX/sfx_checkpoint.wav"] },
+    "UiMove": { "files": ["../Audio/SFX/sfx_ui_move.wav"] },
+    "UiConfirm": { "files": ["../Audio/SFX/sfx_ui_confirm.wav"] },
+    "UiBack": { "files": ["../Audio/SFX/sfx_ui_back.wav"] },
+    "PauseOpen": { "files": ["../Audio/SFX/sfx_pause_open.wav"] },
+    "PauseClose": { "files": ["../Audio/SFX/sfx_pause_close.wav"] }
+  },
+  "mixer_groups": {
+    "Master": ["Music", "SFX", "UI"],
+    "Music": ["ProjectionIdle", "Action", "Victory"],
+    "SFX": ["Movement", "Web", "Impact"],
+    "UI": ["UiMove", "UiConfirm", "UiBack", "Pause"]
+  }
+}

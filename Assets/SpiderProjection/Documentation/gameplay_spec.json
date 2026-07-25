@@ -1,0 +1,89 @@
+{
+  "schema": "spider-projection.gameplay.v1",
+  "world": {
+    "dimension": "2D XY",
+    "camera": "Orthographic",
+    "forward_axis": "+Z toward the camera; SpriteRenderer plane is XY",
+    "pixel_art_ppu": 32,
+    "physics_timestep": 0.0166667,
+    "background_clear_color": "#000000"
+  },
+  "starting_tuning": {
+    "run_speed": 7.0,
+    "ground_acceleration": 52.0,
+    "ground_deceleration": 64.0,
+    "air_acceleration": 30.0,
+    "jump_speed": 11.0,
+    "coyote_time_seconds": 0.12,
+    "jump_buffer_seconds": 0.12,
+    "normal_gravity_scale": 3.5,
+    "jump_cut_gravity_scale": 5.5,
+    "max_fall_speed": 18.0,
+    "roll_speed": 9.0,
+    "roll_duration_seconds": 0.43,
+    "hard_landing_speed": 13.0,
+    "swing_search_radius": 8.0,
+    "swing_min_rope_length": 1.4,
+    "swing_max_rope_length": 8.5,
+    "swing_pump_force": 18.0,
+    "swing_reel_speed": 2.4,
+    "swing_release_boost": 1.25
+  },
+  "components": [
+    { "name": "PlayerBrain", "responsibility": "Owns the hierarchical gameplay state machine and coordinates modules." },
+    { "name": "PlayerInputReader", "responsibility": "Converts Input System callbacks into buffered intent; contains no physics." },
+    { "name": "SpiderMotor2D", "responsibility": "Ground/air Rigidbody2D velocity, acceleration, jump buffer, coyote time, landing classification." },
+    { "name": "SwingController2D", "responsibility": "Anchor acquisition, DistanceJoint2D lifecycle, rope length, pump/reel forces, release momentum." },
+    { "name": "WebTargetResolver2D", "responsibility": "Scores visible WebAnchor2D candidates by aim alignment, height, distance, and obstruction." },
+    { "name": "WallTraversal2D", "responsibility": "Wall cling/crawl, ledge detection, climb arc, and wall jump handoff." },
+    { "name": "PlayerSensors2D", "responsibility": "Ground, wall, ceiling, ledge, hazard, and mapped-surface queries using non-allocating casts." },
+    { "name": "AnimationDriver2D", "responsibility": "Maps gameplay state to clips, sets SpriteRenderer.flipX, emits frame events only for presentation." },
+    { "name": "PlayerAudioView", "responsibility": "Subscribes to gameplay events and plays randomized one-shots without affecting state." },
+    { "name": "WebLineView2D", "responsibility": "Draws the line between wrist socket and anchor with a URP 2D unlit material." },
+    { "name": "ProjectionLayout", "responsibility": "ScriptableObject containing calibrated physical-surface geometry and output settings." },
+    { "name": "MappedSurface2D", "responsibility": "Marks an invisible Collider2D as ground, shelf, frame, wall, one-way platform, and/or web-attachable." },
+    { "name": "ProjectionCalibrationController", "responsibility": "Shows calibration grid, editable colliders/anchors, blackout, and persistence." }
+  ],
+  "gameplay_state_groups": {
+    "Grounded": ["Idle", "Run", "Crouch", "Skid", "JumpStart", "Land", "Roll"],
+    "Airborne": ["JumpRise", "Apex", "Fall"],
+    "Swinging": ["WebShoot", "SwingAttach", "SwingLoop", "SwingRelease"],
+    "Surface": ["WallCling", "WallCrawl", "LedgeGrab", "LedgeClimb"],
+    "Reaction": ["Hurt", "Defeat", "Celebrate"]
+  },
+  "transition_rules": [
+    "Any controllable state -> Hurt on damage unless invulnerable.",
+    "Any non-defeat state -> Defeat when health or fail condition reaches zero.",
+    "Grounded Idle/Run/Crouch -> JumpStart when buffered Jump is accepted.",
+    "JumpStart -> JumpRise immediately after applying jump impulse; do not wait for animation exit time.",
+    "JumpRise -> Apex when absolute vertical velocity enters the apex threshold.",
+    "Apex -> Fall when vertical velocity is negative beyond the apex threshold.",
+    "Airborne or Grounded -> WebShoot when Swing is performed and a candidate anchor exists.",
+    "WebShoot -> SwingAttach when the anchor ray reaches the target; SwingAttach -> SwingLoop when the joint is enabled.",
+    "SwingLoop -> SwingRelease when Swing is canceled, the anchor is invalid, or the rope is obstructed.",
+    "Airborne -> Land when a ground sensor hit occurs; use Fall impact speed to choose soft/hard landing.",
+    "Land -> Run when Move is held; Land -> Idle otherwise; hard landing may route to Roll when Roll is buffered.",
+    "Grounded moving -> Roll on Roll performed; Roll remains interruptible by Hurt and Swing.",
+    "Airborne -> WallCling when a valid wall contact exists, toward-wall input is held, and vertical speed is within limits.",
+    "WallCling -> WallCrawl with vertical input; WallCling/WallCrawl -> LedgeGrab when upper wall ray misses and ledge ray hits.",
+    "LedgeGrab -> LedgeClimb with toward/up input; all surface states -> Fall when contact is lost."
+  ],
+  "swing_anchor_score": {
+    "require_line_of_sight": true,
+    "reject_below_player_unless_aimed": true,
+    "weights": {
+      "aim_alignment": 0.45,
+      "height_advantage": 0.25,
+      "distance": 0.2,
+      "forward_bias": 0.1
+    },
+    "tie_breaker": "shorter distance"
+  },
+  "physics_notes": [
+    "Use a Dynamic Rigidbody2D with Continuous collision detection and Interpolate.",
+    "Use a CapsuleCollider2D for the player; change its size for crouch/roll through state-owned profiles.",
+    "Enable one DistanceJoint2D only while swinging. Set autoConfigureDistance false and update distance for reel input.",
+    "Do not animate the player's root transform. Sprite animation is visual-only under a Rigidbody2D root.",
+    "Collider2D geometry is already invisible; a mesh does not need to be created and hidden."
+  ]
+}

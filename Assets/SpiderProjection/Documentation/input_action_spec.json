@@ -1,0 +1,103 @@
+{
+  "schema": "spider-projection.input-actions.v1",
+  "action_map": "Gameplay",
+  "control_schemes": ["Keyboard&Mouse", "Gamepad", "Joystick"],
+  "actions": [
+    {
+      "name": "Move",
+      "type": "Value",
+      "control_type": "Vector2",
+      "keyboard": "WASD and arrow keys",
+      "gamepad": "leftStick and dpad",
+      "joystick": "stick"
+    },
+    {
+      "name": "Jump",
+      "type": "Button",
+      "interactions": "Press",
+      "keyboard": "space",
+      "gamepad": "buttonSouth",
+      "joystick": "trigger or button1 after device test"
+    },
+    {
+      "name": "Swing",
+      "type": "Button",
+      "interactions": "Press; release cancels",
+      "keyboard": "mouse left or F",
+      "gamepad": "rightTrigger",
+      "joystick": "button0",
+      "note": "Attach to the highest-scored reachable WebAnchor2D on performed; release on canceled."
+    },
+    {
+      "name": "Aim",
+      "type": "Value",
+      "control_type": "Vector2",
+      "keyboard": "mouse delta or Move fallback",
+      "gamepad": "rightStick",
+      "joystick": "hatswitch",
+      "note": "Optional bias only. Zero input uses velocity direction, then facing/up bias."
+    },
+    {
+      "name": "Roll",
+      "type": "Button",
+      "interactions": "Press",
+      "keyboard": "leftCtrl or C",
+      "gamepad": "buttonEast",
+      "joystick": "button2"
+    },
+    {
+      "name": "WebZip",
+      "type": "Button",
+      "interactions": "Press",
+      "keyboard": "Q",
+      "gamepad": "leftShoulder",
+      "joystick": "button4",
+      "note": "Post-MVP action: pull toward an anchor without entering a full pendulum swing."
+    },
+    {
+      "name": "Interact",
+      "type": "Button",
+      "interactions": "Press",
+      "keyboard": "E",
+      "gamepad": "buttonNorth",
+      "joystick": "button3"
+    },
+    {
+      "name": "Pause",
+      "type": "Button",
+      "interactions": "Press",
+      "keyboard": "escape",
+      "gamepad": "start",
+      "joystick": "button9"
+    },
+    {
+      "name": "Reset",
+      "type": "Button",
+      "interactions": "Hold(duration=0.5)",
+      "keyboard": "R",
+      "gamepad": "select",
+      "joystick": "button8"
+    },
+    {
+      "name": "ToggleCalibration",
+      "type": "Button",
+      "interactions": "Hold(duration=0.75)",
+      "keyboard": "F1",
+      "gamepad": "start+select handled as a chord in code",
+      "joystick": "button8+button9 handled as a chord in code"
+    }
+  ],
+  "player_input": {
+    "behavior": "Invoke C Sharp Events",
+    "default_map": "Gameplay",
+    "auto_switch_control_scheme": true,
+    "single_player": true,
+    "deadzone": { "min": 0.15, "max": 0.95 }
+  },
+  "eight_bit_controller_check": [
+    "Open Window > Analysis > Input Debugger and confirm whether the controller appears as Gamepad or Joystick.",
+    "Exercise every button and both sticks before finalizing bindings.",
+    "Prefer XInput mode on Windows when the controller supports it.",
+    "Save interactive rebinding overrides to PlayerPrefs; do not hard-code a specific 8BitDo model."
+  ]
+}

@@ -1,0 +1,1132 @@
+{
+  "schema": "spider-projection.asset-pack.v1",
+  "root": "Assets/SpiderProjection",
+  "summary": {
+    "files": 103,
+    "runtime_images": 55,
+    "audio_files": 33,
+    "music_files": 3,
+    "sfx_files": 30
+  },
+  "import_defaults": {
+    "pixel_art": {
+      "texture_type": "Sprite (2D and UI)",
+      "sprite_mode": "Multiple for atlases and strips; Single for standalone props/VFX",
+      "pixels_per_unit": 32,
+      "filter_mode": "Point",
+      "compression": "None",
+      "generate_mip_maps": false,
+      "wrap_mode": "Clamp",
+      "sRGB": true
+    },
+    "audio": {
+      "load_type_sfx": "Decompress On Load",
+      "load_type_music": "Streaming",
+      "compression_format_music": "Vorbis",
+      "force_to_mono": false
+    }
+  },
+  "provenance": {
+    "runtime_pixel_art": "Deterministic local Pillow generator; original shapes and palette; no source image pixels copied.",
+    "audio": "Local LS-CLAD algorithmic synthesis; no samples, datasets, or Unity AI credits.",
+    "third_party_reference_files_included": false,
+    "character_note": "Crimson Crawler is an original runtime stand-in for a private fan prototype."
+  },
+  "assets": [
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_apex.png",
+      "bytes": 1342,
+      "sha256": "4bf8c001c972a003ec6a7da4bf08c0ff162d4be253497c10d4980953a8a06bec"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        512,
+        704
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_atlas.png",
+      "bytes": 37424,
+      "sha256": "d1ad798490c8113abc1d8cec45ec13a4f1ab795ad3850aa5236f5957a8c4aa36"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        384,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_celebrate.png",
+      "bytes": 1875,
+      "sha256": "7bd47368209ff0741c83c22fdfeda40a4d658ed2447fede9955478d65cfd3bb7"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_crouch.png",
+      "bytes": 1239,
+      "sha256": "93520ee324de935346fdd4e77893c596a958df94a5f29087204c3e8cba08e58e"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        256,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_defeat.png",
+      "bytes": 2285,
+      "sha256": "60af0d23938b9a7e14463706289902db4a638ea1ba315155afa0f4ca5daae591"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        192,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_fall.png",
+      "bytes": 1493,
+      "sha256": "02896010d039b2436965f2eb59fa72d1f7fa1bdc6f8c27a45324729503b7b560"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        192,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_hurt.png",
+      "bytes": 1561,
+      "sha256": "86eadec85d278644363b6e90474a943e393ef73989feec7e8f81affa01eebd40"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        384,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_idle.png",
+      "bytes": 1950,
+      "sha256": "cedbda14ec2b9dc34804ec92514f36297b9fba13934fc32f338d2ba5dce578a0"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        192,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_jump_rise.png",
+      "bytes": 1588,
+      "sha256": "ef8c61bae0e275515aa6614318ead19177250149983ecefe289284954dd773fc"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        192,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_jump_start.png",
+      "bytes": 1967,
+      "sha256": "843e89796ec117d4552f1c1513f1fe75754cccb652043d6a32fb1013f37c0f97"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        256,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_land.png",
+      "bytes": 2165,
+      "sha256": "0699faeb7a1a9fe95cd89e39f55438753fc9fa2a7b9fad6b37c7e314462d81c3"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        320,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_ledge_climb.png",
+      "bytes": 2695,
+      "sha256": "3ed80196f211ea1f2cd0c5f51e2a3d9342446363452a25723ab138eb4627c0b3"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_ledge_grab.png",
+      "bytes": 1275,
+      "sha256": "9061062adfedb5c2c116a43c9fbcd3ca9bba55c3f60dd936e42548524d17e4ef"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.sprite-library.v1",
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_manifest.json",
+      "bytes": 30720,
+      "sha256": "50f46233e6b84adc768380220c129f774d605e20e58c879b0a1002a712f51a9a"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        384,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_roll.png",
+      "bytes": 1808,
+      "sha256": "a6f2c22072b8feec7d19e1c56e998210b00341491bc75471713b88511750885f"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        512,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_run.png",
+      "bytes": 3226,
+      "sha256": "693206bd6b6f4b3bb700abad094b073bcea80088b73dc4eef66a17c35cb195b5"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        256,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_skid.png",
+      "bytes": 1748,
+      "sha256": "7701c43baba7a045b92510d107e52ca94ea058b9fdbae39a70d6c188b261e5ce"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        192,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_swing_attach.png",
+      "bytes": 1514,
+      "sha256": "ee0852721f9818d687398975a06383802648c87969c7e71d7635634db4885191"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        512,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_swing_loop.png",
+      "bytes": 3400,
+      "sha256": "962d14985a3def86ffe7a0b571dcaaa9ce0a2d723bab3c07a09c0fee17cbf5c7"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        192,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_swing_release.png",
+      "bytes": 1894,
+      "sha256": "1aab5e334cc3fdfe2c83aeb93ed7c9ae4dd494cce7492263683f84f12e07c593"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_wall_cling.png",
+      "bytes": 1242,
+      "sha256": "8d41affdc0033b5dd7e692cb6a0eae93c923a137f91a80d69ba38bc600d35dc6"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        384,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_wall_crawl.png",
+      "bytes": 2392,
+      "sha256": "c6b7e78345a0f23a4861486712ca1d49cca6ebb5b730b3c76b7f3f8aab7638f2"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        256,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Character/crimson_crawler_web_shoot.png",
+      "bytes": 1502,
+      "sha256": "728a8496fe5e39d031a651283df00043d73d44f34cc73c7c8084962c7139c269"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/cabinet.png",
+      "bytes": 380,
+      "sha256": "7c135be35cb27c169b3d3b22a08ded4e21783df5d67109a7afd14ca5ebff695c"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/clock.png",
+      "bytes": 827,
+      "sha256": "38e37017c978f341fd8b5c8b347d9b6505b545d4d973c87bf88b6e05ca0365db"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/frame_0.png",
+      "bytes": 563,
+      "sha256": "77ab2fc3e31abe805a8b1949d60c20d1077de126a91c5ad61a001830fb357fd5"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/frame_1.png",
+      "bytes": 545,
+      "sha256": "a1f56edca99739e16fa1e719de8ead39c419fe57a5d43dacbc85b4c5a8ce4f9a"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/frame_2.png",
+      "bytes": 553,
+      "sha256": "f4e96948e027e65b2e6fc90664e3ecb277a717077416df2e479e9a5f3c78a71b"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/frame_3.png",
+      "bytes": 554,
+      "sha256": "7ac0cf9756efae14e4eb8a4ffc030d8ed8b5ecef46f0ee7e2fef034112d2da15"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/plant.png",
+      "bytes": 939,
+      "sha256": "b95f395bf12a828dc0feeec021568e38364a1dfbb6917603db07e3835ec36301"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/shelf_books.png",
+      "bytes": 506,
+      "sha256": "43f8ec7d2f71dcc5643623bcc3f1addb766a3ed874351f51fd9996b41d8c00d4"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/shelf_long.png",
+      "bytes": 360,
+      "sha256": "effa5fcf4222de84c8884b4bb6349fa45a891834bbfdf2406a5dc71dfce4347a"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/shelf_short.png",
+      "bytes": 365,
+      "sha256": "f51474330da99e3ea9b068fc8c745218573950888339d8006032921ea39cea4e"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/speaker.png",
+      "bytes": 788,
+      "sha256": "d6d6dc9c77cf4f654e2250acb65123f0162b522e1298afbb559a9e6a33e610bc"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/wall_hook.png",
+      "bytes": 469,
+      "sha256": "412dadcea246ec7ff39e01f09ded5f83360d94d46ae0939626ce1503f63ece38"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/wall_obstacle_atlas.png",
+      "bytes": 5535,
+      "sha256": "60a43abf074ef0a366aecc15fc0d07646cbc4cb2af9dc3c79aeb1159700606f1"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.environment-library.v1",
+      "path": "Assets/SpiderProjection/Art/Environment/wall_obstacle_manifest.json",
+      "bytes": 3735,
+      "sha256": "17dd8198e34cf186aac08800113574e46e928450db89cb4d1da2c02d66b90643"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/wall_vent.png",
+      "bytes": 336,
+      "sha256": "d24df157c09d58094d811f25a46ebdc3b35e40365979c9addea1f2cec8318f41"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Environment/window.png",
+      "bytes": 402,
+      "sha256": "4d75885220f4d0bb7b2fb1b28f02d6a4558c4dfe56928914a4ab00779b02afa0"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "has_alpha": false,
+      "path": "Assets/SpiderProjection/Art/Projection/projection_blackout_1920x1080.png",
+      "bytes": 6108,
+      "sha256": "08865b5fefe9692b4f7887929af5e35e255a89f36686909a19a65f5e79722f93"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "has_alpha": false,
+      "path": "Assets/SpiderProjection/Art/Projection/projection_calibration_1920x1080.png",
+      "bytes": 12280,
+      "sha256": "98c3abac38c8bb65f44fd8d03921288146f9bac144505d214cdde929dc1cac96"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        1920,
+        1080
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/Projection/projection_safe_area_overlay.png",
+      "bytes": 10218,
+      "sha256": "4a583b4d1e010f77d1c59c6b0a0a6acee988a080f106cbf899a7b6bc6c4701f6"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        384,
+        192
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/UI/input_glyphs.png",
+      "bytes": 4081,
+      "sha256": "1031a1d57eff21a9f6f421710216c30b700333cab9547ca6edb7824fb3aad684"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.input-glyphs.v1",
+      "path": "Assets/SpiderProjection/Art/UI/input_glyphs_manifest.json",
+      "bytes": 354,
+      "sha256": "88a17e1cbc5cdbf6fd277b39c080f9fbcae43c512e50620a7e054fe922da12e4"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/anchor_debug.png",
+      "bytes": 400,
+      "sha256": "8c7a46215c93e10379b8cf8fc6cedcb8453d2de77595ee072541e863ac67d568"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/danger_pulse.png",
+      "bytes": 351,
+      "sha256": "a51c6859987f6117b72de4d77b096cf4707b7a53bcf6e7520d656ee62c6d2dd4"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/dust_large.png",
+      "bytes": 290,
+      "sha256": "218321c5e72bdb068c5bd2f5881d30e942fa0ad403632c93af3f3399628a7409"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/dust_small.png",
+      "bytes": 257,
+      "sha256": "502a37a5bcc2e9b1420762f9309a04fd1b1423779ce429bb8c513f7245965846"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/goal_sparkle.png",
+      "bytes": 346,
+      "sha256": "c95af5a93653d98f09468558188c63d47673674ac2f3ab26cb7249c892901517"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/impact_star.png",
+      "bytes": 629,
+      "sha256": "6692ad65db8990cd91e658ec4b8668b53c279570bcbdd2ad19c326cc74b29de2"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/land_ring.png",
+      "bytes": 257,
+      "sha256": "1eb476127762bd3aacee72ec3ac835cd73beccf1dbef6cb469920fae7c27bb9a"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/roll_dust.png",
+      "bytes": 298,
+      "sha256": "6bb80cab597634a38a9bb01f1594890e9379da30e73a24a3e5409aed1b055ce4"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/speed_lines.png",
+      "bytes": 186,
+      "sha256": "9fa31458446f327be53d2b63c7c4a5a41661ae94eb8685a043f75d1fc5511d71"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/swing_arc.png",
+      "bytes": 351,
+      "sha256": "510582bb22c6eb2afe07a4c19116a0b820d231cbcd02a7d68c53dd8bd948d391"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        256,
+        192
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/vfx_atlas.png",
+      "bytes": 3454,
+      "sha256": "5026028b14ba852156adcf4a8081be6ce5a97b7de35bf5ea5b4cea4cfb77ff69"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.vfx-library.v1",
+      "path": "Assets/SpiderProjection/Art/VFX/vfx_manifest.json",
+      "bytes": 1327,
+      "sha256": "2cee33cb2abc19eac8516fde11773ae55881cefc05d2f3764eb5009ec0aa350a"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/web_attach.png",
+      "bytes": 655,
+      "sha256": "30f51e74c38accd4cf615c58b04e83dd5db970bfce585a2fc63cb05ea112b017"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        64,
+        64
+      ],
+      "mode": "RGBA",
+      "has_alpha": true,
+      "path": "Assets/SpiderProjection/Art/VFX/web_muzzle.png",
+      "bytes": 323,
+      "sha256": "0221e56a9ceb51cce5598b400b884b3463b8e081937a13ccc9b774b761a4ea0a"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 37.6845,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/Music/music_projection_idle.wav",
+      "bytes": 6647584,
+      "sha256": "d08ea00ad9b89a9936dd4039abd0c63f08253346039d04677d305df306cc4bb0"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 12.4745,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/Music/music_victory_stinger.wav",
+      "bytes": 2200548,
+      "sha256": "a6bbff949d60e69acf3019021a6ab1fdb983a4d69466974f8773dd1a8f52ac7e"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 41.8934,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/Music/music_wallcrawler_action.wav",
+      "bytes": 7390032,
+      "sha256": "29ca313b702986d95c65b31ab15b196ebce05257bc31cb6e1a1d8282f28940ec"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 1.7183,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_checkpoint.wav",
+      "bytes": 303148,
+      "sha256": "90096c0e206e767570ba92e1d0cd8af685f08128cb25881883b61c92cc5bbf8c"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.5,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_footstep_wood_01.wav",
+      "bytes": 88244,
+      "sha256": "a32891c171a9d99e50e558c63b40963101e9e99be561c8acee0ac7570859ca46"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.5,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_footstep_wood_02.wav",
+      "bytes": 88244,
+      "sha256": "e9b548377aedee4af1489e3f820b8ec09e9fe67690155c493ab10279b6742480"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.5,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_footstep_wood_03.wav",
+      "bytes": 88244,
+      "sha256": "a8d4b905f2d404dfa6871903dafe7c4623dd5d4da80da1c56be11b329cbbd918"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.5,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_footstep_wood_04.wav",
+      "bytes": 88244,
+      "sha256": "122bffaf7234dd79b1deb3fd06c7e2aef10a4601edd059e72530ffae5d8aa938"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.18,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_hurt.wav",
+      "bytes": 31796,
+      "sha256": "7cdf1453df850f20b568627812e3110f2cadadfa7f7f8739dd14c759c75aa78f"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.2089,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_jump.wav",
+      "bytes": 36892,
+      "sha256": "45aac68f1abaa38ce593b3e40baebd3e8842291480b0c26f7c3aa3d56cd4b68f"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.9836,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_land_hard.wav",
+      "bytes": 173556,
+      "sha256": "13fd2ae4d07c7c7e29429fb300b7ba67665e761523586e689e82c6a8e682e5e4"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.8575,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_land_soft.wav",
+      "bytes": 151300,
+      "sha256": "6302317fddbd79e56f796b7359fc741502de988790d38bb42d03a344f93a7a83"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.812,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_ledge_grab.wav",
+      "bytes": 143276,
+      "sha256": "724aeaa6762c0a660178e7dd574fb2f0082acfd1ab339256b6d20894876c3e26"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.12,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_pause_close.wav",
+      "bytes": 21212,
+      "sha256": "e97649a8afabaa1a8c540c8fec4be41cd9af8cfe11273d9efccf04b199c52a14"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.12,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_pause_open.wav",
+      "bytes": 21212,
+      "sha256": "55433d0e496554249d086d3533c67b5640a9669075a0acd21425004fff7e7c84"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.52,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_roll.wav",
+      "bytes": 91772,
+      "sha256": "a3ba9238da09e58e2e26e3b46fd62bb1274e1a1534ae801d4cbd8a61ed7e3101"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.42,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_skid.wav",
+      "bytes": 74132,
+      "sha256": "1ed4883e5f9a9a500f30b76b4e2ef61e6f5658442d0d6014079f0329df804963"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 2.45,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_spider_sense.wav",
+      "bytes": 432220,
+      "sha256": "d5c8277a9f2aae7221ddf94e0344c71e7edbc54bc14cbca0b13e9aac3f40ab8c"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.62,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_swing_whoosh_01.wav",
+      "bytes": 109416,
+      "sha256": "428fa8276ae0e2f36ba03032648b0dcbccb7454a111aa7411c28a69b7f4177ad"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.7746,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_swing_whoosh_02.wav",
+      "bytes": 136688,
+      "sha256": "d66f41d5537808be9e31feb4d3d9b65318260eaf08c68970fb30fdc7275eb3cf"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.6081,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_swing_whoosh_03.wav",
+      "bytes": 107320,
+      "sha256": "6ef09f53cc7723ad190b237c474ef292b829d0a3eb7e5f0748aaa25790fd4842"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.12,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_ui_back.wav",
+      "bytes": 21212,
+      "sha256": "8b2a5ac6a79475d41a66170939a01e0914359f604875285ac781fb360aa13d78"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.08,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_ui_confirm.wav",
+      "bytes": 14156,
+      "sha256": "f2b758b4177e8fe66d554caed6b6278ae2225dea92ff0b2f3dba85bfa73932cb"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.07,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_ui_move.wav",
+      "bytes": 12392,
+      "sha256": "3a1c713abc2c4e51b2873d02bcd6d60a852e8b750c7d8a7b93b6dd4f82553838"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.48,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_wall_crawl.wav",
+      "bytes": 84716,
+      "sha256": "f6bdae1adc6457103c69c418f55c16066a8aa7d745c930bb01a9b03144ca3fe8"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.9,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_web_attach_metal.wav",
+      "bytes": 158800,
+      "sha256": "717d04d5bd5618ae180d170cd0db45611b548effc4932e23d565c1c8fc6a536e"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.704,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_web_attach_wall.wav",
+      "bytes": 124224,
+      "sha256": "8d85d0d484d1a191ce32c2dddb8ec48431de3027d26879c5706cbc314adacc4c"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.7959,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_web_attach_wood.wav",
+      "bytes": 140444,
+      "sha256": "9e34baa2062c85f230f2464b02a43a4e1abe90c1f959bc6f0b311d571d14508d"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.1675,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_web_release.wav",
+      "bytes": 29592,
+      "sha256": "92e508ecb010c51cae21bc513fb5c11f55ce6fd7e716acb67ae6d73942ebf02e"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.1422,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_web_shoot_01.wav",
+      "bytes": 25124,
+      "sha256": "d504a8a396d3f4e2df40d6d67ba75dceb3b5953233839387ea553175fcdeeb9d"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.1473,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_web_shoot_02.wav",
+      "bytes": 26020,
+      "sha256": "61c15907e7d8625e9add9c9cdb43e0d3d59724e13a6b1cf2f2d324f9da6c211d"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 0.1595,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_web_shoot_03.wav",
+      "bytes": 28184,
+      "sha256": "d5a46d8d14cf2e8ba8494c1d851377ab7661e13c974e37b6198f3dea5d99b266"
+    },
+    {
+      "kind": "audio",
+      "duration_seconds": 2.21,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "sample_width_bytes": 2,
+      "path": "Assets/SpiderProjection/Audio/SFX/sfx_web_tension.wav",
+      "bytes": 389884,
+      "sha256": "9129ebc391169e256ab3b49ce92c18dd077fd46aa521468e0b7ba4f7b367a4f0"
+    },
+    {
+      "kind": "document",
+      "path": "Assets/SpiderProjection/Documentation/ARCHITECTURE.md",
+      "bytes": 6605,
+      "sha256": "aa2d76af04a72576f90d678e9b2245eec1ca5db8baf5b526eacabae7deb6fb82"
+    },
+    {
+      "kind": "document",
+      "path": "Assets/SpiderProjection/Documentation/ASSET_PROVENANCE.md",
+      "bytes": 1258,
+      "sha256": "76edb133dbc344dc18395ab6332c7524d2041d6bc30000c2f90b0468173d8da0"
+    },
+    {
+      "kind": "document",
+      "path": "Assets/SpiderProjection/Documentation/PROJECTION_SETUP.md",
+      "bytes": 2650,
+      "sha256": "dea0a5121629db95fba1f910ecd48f76819bf1298f0cc95f5053e546c6f14fd4"
+    },
+    {
+      "kind": "preview",
+      "size_px": [
+        256,
+        256
+      ],
+      "frames": 43,
+      "runtime_asset": false,
+      "path": "Assets/SpiderProjection/Documentation/Previews/crimson_crawler_animation_reel.gif",
+      "bytes": 99596,
+      "sha256": "3a8f8d803cfb2f53c9035a85ca02f49d5f7883c36bd7581ad448aecd51cded49"
+    },
+    {
+      "kind": "image",
+      "size_px": [
+        1088,
+        1776
+      ],
+      "mode": "RGB",
+      "has_alpha": false,
+      "path": "Assets/SpiderProjection/Documentation/Previews/crimson_crawler_contact_sheet.png",
+      "bytes": 33606,
+      "sha256": "a379444c58715f48ac30e698ba75b5adf946524a9f8d6f13d129ff047dd55b38"
+    },
+    {
+      "kind": "document",
+      "path": "Assets/SpiderProjection/Documentation/UNITY_MCP_HANDOFF.md",
+      "bytes": 5484,
+      "sha256": "9f819f958b56fcc03f923ff385fb73ed1e257cf6f127a71251d575f3d353f9d3"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.animator-state-machine.v1",
+      "path": "Assets/SpiderProjection/Documentation/animator_state_machine_spec.json",
+      "bytes": 4337,
+      "sha256": "6698f74945d31c5814d65d844a3151dd598cf5af869ccffea3968a962f1d875e"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.audio-events.v1",
+      "path": "Assets/SpiderProjection/Documentation/audio_event_spec.json",
+      "bytes": 2814,
+      "sha256": "e269b2babb6ffccbdac4ce1700440b8aefb1260acff0cc4384f61d5734f1e1c8"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.gameplay.v1",
+      "path": "Assets/SpiderProjection/Documentation/gameplay_spec.json",
+      "bytes": 5513,
+      "sha256": "3b4f4396bd298b88c12c976dec101ad2ab3dfa70037f5ae03f3559aeff81ca75"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.input-actions.v1",
+      "path": "Assets/SpiderProjection/Documentation/input_action_spec.json",
+      "bytes": 3029,
+      "sha256": "5c133b0ff1bc69b1b141a34cc3510428a2cadd45fb09558c64f5537229e0230d"
+    },
+    {
+      "kind": "data",
+      "schema": "spider-projection.layout.v1",
+      "path": "Assets/SpiderProjection/Documentation/projection_layout.example.json",
+      "bytes": 2466,
+      "sha256": "f0e40910965695f5fe7c7430a0a5e3e305d07c3a42a9bcc5a9b6c49b86fb8c30"
+    },
+    {
+      "kind": "document",
+      "path": "Assets/SpiderProjection/README.md",
+      "bytes": 3091,
+      "sha256": "463215543472f2744872c72be60d8062ee817879968435696b29021a970fe9f5"
+    }
+  ]
+}

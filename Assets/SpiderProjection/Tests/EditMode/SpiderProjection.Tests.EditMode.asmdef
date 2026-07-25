@@ -1,0 +1,21 @@
+{
+  "name": "SpiderProjection.Tests.EditMode",
+  "rootNamespace": "SpiderProjection.Tests.EditMode",
+  "references": [
+    "SpiderProjection.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

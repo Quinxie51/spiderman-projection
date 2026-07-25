@@ -1,0 +1,23 @@
+{
+  "schema": "spider-projection.input-glyphs.v1",
+  "cell_size_px": [
+    96,
+    64
+  ],
+  "columns": 4,
+  "labels": [
+    "A",
+    "D",
+    "SPACE",
+    "SHIFT",
+    "E",
+    "LMB",
+    "LS",
+    "A",
+    "X",
+    "RT",
+    "LB",
+    "START"
+  ],
+  "note": "Use Input System control schemes to choose keyboard or generic gamepad glyphs at runtime."
+}

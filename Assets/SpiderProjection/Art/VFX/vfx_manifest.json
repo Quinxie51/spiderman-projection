@@ -1,0 +1,71 @@
+{
+  "schema": "spider-projection.vfx-library.v1",
+  "cell_size_px": [
+    64,
+    64
+  ],
+  "pixels_per_unit": 32,
+  "atlas": "vfx_atlas.png",
+  "entries": [
+    {
+      "name": "web_muzzle",
+      "file": "web_muzzle.png",
+      "atlas_index": 0
+    },
+    {
+      "name": "web_attach",
+      "file": "web_attach.png",
+      "atlas_index": 1
+    },
+    {
+      "name": "dust_small",
+      "file": "dust_small.png",
+      "atlas_index": 2
+    },
+    {
+      "name": "dust_large",
+      "file": "dust_large.png",
+      "atlas_index": 3
+    },
+    {
+      "name": "impact_star",
+      "file": "impact_star.png",
+      "atlas_index": 4
+    },
+    {
+      "name": "swing_arc",
+      "file": "swing_arc.png",
+      "atlas_index": 5
+    },
+    {
+      "name": "speed_lines",
+      "file": "speed_lines.png",
+      "atlas_index": 6
+    },
+    {
+      "name": "danger_pulse",
+      "file": "danger_pulse.png",
+      "atlas_index": 7
+    },
+    {
+      "name": "land_ring",
+      "file": "land_ring.png",
+      "atlas_index": 8
+    },
+    {
+      "name": "roll_dust",
+      "file": "roll_dust.png",
+      "atlas_index": 9
+    },
+    {
+      "name": "goal_sparkle",
+      "file": "goal_sparkle.png",
+      "atlas_index": 10
+    },
+    {
+      "name": "anchor_debug",
+      "file": "anchor_debug.png",
+      "atlas_index": 11
+    }
+  ]
+}

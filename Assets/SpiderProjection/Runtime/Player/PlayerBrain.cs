@@ -10,6 +10,8 @@ namespace SpiderProjection.Runtime
     {
         [SerializeField] private PlayerTuning tuning;
         [SerializeField] private LayerMask worldMask = ~0;
+        [SerializeField] private float respawnDelay = 0.6f;
+        [SerializeField] private float respawnInvulnerability = 0.75f;
 
         private Rigidbody2D body;
         private PlayerInputReader input;
@@ -25,10 +27,14 @@ namespace SpiderProjection.Runtime
         private Vector2 resetPosition;
         private int facing = 1;
         private bool paused;
+        private bool isDefeated;
+        private float defeatTimer;
+        private float invulnerableUntil;
 
         public GameplayState CurrentState { get; private set; } = GameplayState.Idle;
         public int Facing => facing;
         public PlayerTuning Tuning => tuning;
+        public bool IsInvulnerable => isDefeated || Time.time < invulnerableUntil;
         public event Action<GameplayState, GameplayState> StateChanged;
 
         private void Awake()
@@ -82,6 +88,16 @@ namespace SpiderProjection.Runtime
                 return;
             }
 
+            if (isDefeated)
+            {
+                defeatTimer -= Time.deltaTime;
+                if (defeatTimer <= 0f)
+                {
+                    Respawn();
+                }
+                return;
+            }
+
             if (input.ConsumeRollPressed())
             {
                 motor.StartRoll(facing);
@@ -113,7 +129,7 @@ namespace SpiderProjection.Runtime
 
         private void FixedUpdate()
         {
-            if (paused)
+            if (paused || isDefeated)
             {
                 return;
             }
@@ -163,6 +179,8 @@ namespace SpiderProjection.Runtime
 
         public void ResetPlayer()
         {
+            isDefeated = false;
+            body.simulated = true;
             if (swing.IsAttached)
             {
                 swing.Detach(false);
@@ -170,6 +188,31 @@ namespace SpiderProjection.Runtime
             body.position = resetPosition;
             motor.ResetMotion();
             SetState(GameplayState.Idle);
+        }
+
+        public void Die()
+        {
+            if (IsInvulnerable)
+            {
+                return;
+            }
+
+            isDefeated = true;
+            defeatTimer = respawnDelay;
+            if (swing.IsAttached)
+            {
+                swing.Detach(false);
+            }
+            body.linearVelocity = Vector2.zero;
+            body.simulated = false;
+            SetState(GameplayState.Defeat);
+            audioView?.PlayHurt();
+        }
+
+        private void Respawn()
+        {
+            invulnerableUntil = Time.time + respawnInvulnerability;
+            ResetPlayer();
         }
 
         private Vector2 ResolveAim()

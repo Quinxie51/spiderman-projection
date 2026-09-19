@@ -346,6 +346,7 @@ namespace SpiderProjection.Editor
                 LoadAudio("sfx_skid"),
                 LoadAudio("sfx_wall_crawl"),
                 LoadAudio("sfx_web_release"),
+                LoadAudio("sfx_hurt"),
                 LoadAudio("sfx_pause_open"),
                 LoadAudio("sfx_pause_close"),
                 new[] { LoadAudio("sfx_web_shoot_01"), LoadAudio("sfx_web_shoot_02"), LoadAudio("sfx_web_shoot_03") },

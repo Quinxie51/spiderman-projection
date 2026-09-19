@@ -15,6 +15,7 @@ namespace SpiderProjection.Runtime
         [SerializeField] private AudioClip skid;
         [SerializeField] private AudioClip wallCrawl;
         [SerializeField] private AudioClip webRelease;
+        [SerializeField] private AudioClip hurt;
         [SerializeField] private AudioClip pauseOpen;
         [SerializeField] private AudioClip pauseClose;
         [SerializeField] private AudioClip[] webShoot;
@@ -37,6 +38,7 @@ namespace SpiderProjection.Runtime
             AudioClip skidClip,
             AudioClip wallCrawlClip,
             AudioClip releaseClip,
+            AudioClip hurtClip,
             AudioClip pauseOpenClip,
             AudioClip pauseCloseClip,
             AudioClip[] webShootClips,
@@ -51,6 +53,7 @@ namespace SpiderProjection.Runtime
             skid = skidClip;
             wallCrawl = wallCrawlClip;
             webRelease = releaseClip;
+            hurt = hurtClip;
             pauseOpen = pauseOpenClip;
             pauseClose = pauseCloseClip;
             webShoot = webShootClips;
@@ -102,6 +105,11 @@ namespace SpiderProjection.Runtime
         public void PlayPause(bool opened)
         {
             Play(opened ? pauseOpen : pauseClose);
+        }
+
+        public void PlayHurt()
+        {
+            Play(hurt);
         }
 
         private void PlayRandom(AudioClip[] clips)

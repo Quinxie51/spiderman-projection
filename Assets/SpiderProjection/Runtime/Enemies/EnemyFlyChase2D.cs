@@ -17,6 +17,8 @@ namespace SpiderProjection.Runtime
         private Rigidbody2D body;
         private Transform player;
         private float bobTimer;
+        private Vector2 startPosition;
+        private PlayerBrain brain;
 
         private void Awake()
         {
@@ -24,12 +26,32 @@ namespace SpiderProjection.Runtime
             body.bodyType = RigidbodyType2D.Kinematic;
             body.gravityScale = 0f;
             spriteToFlip ??= GetComponentInChildren<SpriteRenderer>();
+            startPosition = body.position;
         }
 
         private void Start()
         {
-            PlayerBrain brain = FindFirstObjectByType<PlayerBrain>();
+            brain = FindFirstObjectByType<PlayerBrain>();
             player = brain != null ? brain.transform : null;
+            if (brain != null)
+            {
+                brain.Restarted += Restart;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (brain != null)
+            {
+                brain.Restarted -= Restart;
+            }
+        }
+
+        private void Restart()
+        {
+            bobTimer = 0f;
+            body.position = startPosition;
+            transform.position = startPosition;
         }
 
         private void FixedUpdate()

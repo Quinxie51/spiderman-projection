@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 245405176428404515}
   - component: {fileID: 1744180024297155765}
   - component: {fileID: 657449545389824871}
-  - component: {fileID: 4961722474341084640}
+  - component: {fileID: 7222419554336238483}
   m_Layer: 12
   m_Name: PF_EnemyCrawler
   m_TagString: Untagged
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: SpiderProjection.Runtime::SpiderProjection.Runtime.EnemyContactDamage2D
   playerTag: Player
---- !u!114 &4961722474341084640
+--- !u!114 &7222419554336238483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,14 +151,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2085997256943426334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c04e598c684cf7642bf9e176e2105e94, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a722ef335e037649b184019c136801b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: SpiderProjection.Runtime::SpiderProjection.Runtime.EnemySpriteFlipbook2D
-  target: {fileID: 5734558416915130799}
-  frames:
-  - {fileID: 21300000, guid: 7e93dc39a8edd1046a63d561e40542ba, type: 3}
-  - {fileID: 21300000, guid: c439d25cdb6a8c04da7139c1421bdb11, type: 3}
-  frameRate: 2
+  m_EditorClassIdentifier: SpiderProjection.Runtime::SpiderProjection.Runtime.EnemyDefeatable2D
+  visual: {fileID: 5734558416915130799}
+  hitsToDefeat: 3
+  hitFlashDuration: 0.12
+  flashDuration: 0.25
+  flashInterval: 0.05
+  popDuration: 0.6
+  popHeight: 0.8
+  spinDegrees: 540
 --- !u!1 &7973654160013402258
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +243,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 15
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7e93dc39a8edd1046a63d561e40542ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c439d25cdb6a8c04da7139c1421bdb11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

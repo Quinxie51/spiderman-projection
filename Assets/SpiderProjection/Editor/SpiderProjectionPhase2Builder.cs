@@ -113,6 +113,7 @@ namespace SpiderProjection.Editor
             AddButton(gameplay, "Jump", "Press", ("<Keyboard>/space", "Keyboard&Mouse"), ("<Gamepad>/buttonSouth", "Gamepad"), ("<Joystick>/trigger", "Joystick"), ("<Joystick>/button1", "Joystick"));
             AddButton(gameplay, "Swing", "Press", ("<Mouse>/leftButton", "Keyboard&Mouse"), ("<Keyboard>/f", "Keyboard&Mouse"), ("<Gamepad>/rightTrigger", "Gamepad"), ("<Joystick>/button0", "Joystick"));
             AddButton(gameplay, "Roll", "Press", ("<Keyboard>/leftCtrl", "Keyboard&Mouse"), ("<Keyboard>/c", "Keyboard&Mouse"), ("<Gamepad>/buttonEast", "Gamepad"), ("<Joystick>/button2", "Joystick"));
+            AddButton(gameplay, "Shoot", "Press", ("<Keyboard>/x", "Keyboard&Mouse"), ("<Mouse>/rightButton", "Keyboard&Mouse"), ("<Gamepad>/buttonWest", "Gamepad"), ("<Joystick>/button5", "Joystick"));
             AddButton(gameplay, "WebZip", "Press", ("<Keyboard>/q", "Keyboard&Mouse"), ("<Gamepad>/leftShoulder", "Gamepad"), ("<Joystick>/button4", "Joystick"));
             AddButton(gameplay, "Interact", "Press", ("<Keyboard>/e", "Keyboard&Mouse"), ("<Gamepad>/buttonNorth", "Gamepad"), ("<Joystick>/button3", "Joystick"));
             AddButton(gameplay, "Pause", "Press", ("<Keyboard>/escape", "Keyboard&Mouse"), ("<Gamepad>/start", "Gamepad"), ("<Joystick>/button9", "Joystick"));
@@ -544,9 +545,9 @@ namespace SpiderProjection.Editor
             List<string> failures = new List<string>();
             InputActionAsset actions = AssetDatabase.LoadAssetAtPath<InputActionAsset>(InputActionsPath);
             InputActionMap gameplay = actions?.FindActionMap("Gameplay");
-            if (gameplay == null || gameplay.actions.Count != 10)
+            if (gameplay == null || gameplay.actions.Count != 11)
             {
-                failures.Add("Gameplay action map is missing or does not contain 10 actions.");
+                failures.Add("Gameplay action map is missing or does not contain 11 actions.");
             }
             if (actions == null || actions.controlSchemes.Count != 3)
             {
@@ -584,7 +585,7 @@ namespace SpiderProjection.Editor
                 throw new InvalidDataException("[SpiderProjection] Phase 2 validation failed:\n- " + string.Join("\n- ", failures));
             }
 
-            Debug.Log("[SpiderProjection] Phase 2 validation passed: 10 actions, 3 schemes, 4 prefabs, 2 scenes, and the complete player component graph.");
+            Debug.Log("[SpiderProjection] Phase 2 validation passed: 11 actions, 3 schemes, 4 prefabs, 2 scenes, and the complete player component graph.");
         }
 
         private static AudioClip LoadAudio(string name)

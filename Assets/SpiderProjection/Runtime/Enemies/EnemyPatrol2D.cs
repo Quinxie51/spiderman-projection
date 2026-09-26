@@ -14,6 +14,8 @@ namespace SpiderProjection.Runtime
         private Rigidbody2D body;
         private Collider2D bodyCollider;
         private int direction = -1;
+        private Vector2 startPosition;
+        private PlayerBrain player;
 
         private void Awake()
         {
@@ -22,6 +24,31 @@ namespace SpiderProjection.Runtime
             body.gravityScale = 0f;
             bodyCollider = GetComponent<Collider2D>();
             spriteToFlip ??= GetComponentInChildren<SpriteRenderer>();
+            startPosition = body.position;
+        }
+
+        private void Start()
+        {
+            player = FindFirstObjectByType<PlayerBrain>();
+            if (player != null)
+            {
+                player.Restarted += Restart;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (player != null)
+            {
+                player.Restarted -= Restart;
+            }
+        }
+
+        private void Restart()
+        {
+            direction = -1;
+            body.position = startPosition;
+            transform.position = startPosition;
         }
 
         private void FixedUpdate()

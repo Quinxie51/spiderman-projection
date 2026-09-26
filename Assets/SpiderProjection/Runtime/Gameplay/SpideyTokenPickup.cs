@@ -13,12 +13,30 @@ namespace SpiderProjection.Runtime
 
         private Collider2D triggerCollider;
         private Vector3 origin;
+        private PlayerBrain player;
 
         private void Awake()
         {
             triggerCollider = GetComponent<Collider2D>();
             triggerCollider.isTrigger = true;
             origin = transform.position;
+        }
+
+        private void Start()
+        {
+            player = FindFirstObjectByType<PlayerBrain>();
+            if (player != null)
+            {
+                player.Restarted += Restore;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (player != null)
+            {
+                player.Restarted -= Restore;
+            }
         }
 
         private void Update()
@@ -28,12 +46,22 @@ namespace SpiderProjection.Runtime
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.CompareTag(playerTag) || pickupSound == null)
+            if (!other.CompareTag(playerTag))
             {
                 return;
             }
 
-            AudioSource.PlayClipAtPoint(pickupSound, transform.position, pickupVolume);
+            if (pickupSound != null)
+            {
+                AudioSource.PlayClipAtPoint(pickupSound, transform.position, pickupVolume);
+            }
+            other.GetComponentInParent<PlayerBrain>()?.Heal(1);
+            gameObject.SetActive(false);
+        }
+
+        private void Restore()
+        {
+            gameObject.SetActive(true);
         }
     }
 }

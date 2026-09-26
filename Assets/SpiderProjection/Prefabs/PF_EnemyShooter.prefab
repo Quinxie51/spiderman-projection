@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 562454629570391758}
   - component: {fileID: 4459006008301905427}
   - component: {fileID: 5295307316706296712}
+  - component: {fileID: 3621442311039477835}
   m_Layer: 12
   m_Name: PF_EnemyShooter
   m_TagString: Untagged
@@ -283,3 +284,23 @@ MonoBehaviour:
   bobAmplitude: 0.15
   bobSpeed: 1.5
   spriteToFlip: {fileID: 988643511218744109}
+--- !u!114 &3621442311039477835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374152327616450847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a722ef335e037649b184019c136801b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SpiderProjection.Runtime::SpiderProjection.Runtime.EnemyDefeatable2D
+  visual: {fileID: 988643511218744109}
+  hitsToDefeat: 3
+  hitFlashDuration: 0.12
+  flashDuration: 0.25
+  flashInterval: 0.05
+  popDuration: 0.6
+  popHeight: 0.8
+  spinDegrees: 540

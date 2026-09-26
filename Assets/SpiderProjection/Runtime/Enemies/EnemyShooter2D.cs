@@ -10,14 +10,36 @@ namespace SpiderProjection.Runtime
         [SerializeField] private float projectileSpeed = 6f;
         [SerializeField] private float detectionRange = 9f;
 
+        private PlayerBrain brain;
         private Transform player;
         private float cooldown;
 
         private void Start()
         {
-            PlayerBrain brain = FindFirstObjectByType<PlayerBrain>();
+            brain = FindFirstObjectByType<PlayerBrain>();
             player = brain != null ? brain.transform : null;
             cooldown = fireInterval * 0.5f;
+            if (brain != null)
+            {
+                brain.Restarted += Restart;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (brain != null)
+            {
+                brain.Restarted -= Restart;
+            }
+        }
+
+        private void Restart()
+        {
+            cooldown = fireInterval * 0.5f;
+            foreach (EnemyProjectile2D projectile in FindObjectsByType<EnemyProjectile2D>(FindObjectsSortMode.None))
+            {
+                Destroy(projectile.gameObject);
+            }
         }
 
         private void Update()

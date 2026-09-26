@@ -3,11 +3,10 @@ using UnityEngine;
 namespace SpiderProjection.Runtime
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-    public sealed class EnemyProjectile2D : MonoBehaviour
+    public sealed class PlayerProjectile2D : MonoBehaviour
     {
-        [SerializeField] private float lifetime = 4f;
+        [SerializeField] private float lifetime = 2f;
         [SerializeField] private LayerMask obstacleMask;
-        [SerializeField] private string playerTag = "Player";
 
         private Rigidbody2D body;
 
@@ -22,17 +21,20 @@ namespace SpiderProjection.Runtime
 
         public void Launch(Vector2 direction, float speed)
         {
-            Vector2 normalized = direction.sqrMagnitude > 0.0001f ? direction.normalized : Vector2.left;
+            Vector2 normalized = direction.sqrMagnitude > 0.0001f ? direction.normalized : Vector2.right;
             body.linearVelocity = normalized * speed;
-            transform.right = normalized;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag(playerTag))
+            EnemyDefeatable2D enemy = other.GetComponentInParent<EnemyDefeatable2D>();
+            if (enemy != null)
             {
-                other.GetComponentInParent<PlayerBrain>()?.TakeDamage(1);
-                Destroy(gameObject);
+                if (!enemy.IsDefeated)
+                {
+                    enemy.TakeHit();
+                    Destroy(gameObject);
+                }
                 return;
             }
 

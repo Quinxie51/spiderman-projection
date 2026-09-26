@@ -2,7 +2,8 @@
   "name": "SpiderProjection.Runtime",
   "rootNamespace": "SpiderProjection.Runtime",
   "references": [
-    "Unity.InputSystem"
+    "Unity.InputSystem",
+    "UnityEngine.UI"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

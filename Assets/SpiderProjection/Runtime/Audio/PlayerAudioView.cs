@@ -107,6 +107,11 @@ namespace SpiderProjection.Runtime
             Play(opened ? pauseOpen : pauseClose);
         }
 
+        public void PlayShot()
+        {
+            PlayRandom(webShoot);
+        }
+
         public void PlayHurt()
         {
             Play(hurt);

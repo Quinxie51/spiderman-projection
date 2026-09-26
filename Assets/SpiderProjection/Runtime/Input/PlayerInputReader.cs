@@ -16,6 +16,7 @@ namespace SpiderProjection.Runtime
         private InputAction jumpAction;
         private InputAction swingAction;
         private InputAction rollAction;
+        private InputAction shootAction;
         private InputAction pauseAction;
         private InputAction resetAction;
         private InputAction calibrationAction;
@@ -23,6 +24,7 @@ namespace SpiderProjection.Runtime
         private bool swingPressed;
         private bool swingReleased;
         private bool rollPressed;
+        private bool shootPressed;
         private bool pausePressed;
         private bool resetPressed;
         private bool calibrationPressed;
@@ -45,6 +47,7 @@ namespace SpiderProjection.Runtime
             jumpAction = gameplay.FindAction("Jump", true);
             swingAction = gameplay.FindAction("Swing", true);
             rollAction = gameplay.FindAction("Roll", true);
+            shootAction = gameplay.FindAction("Shoot", true);
             pauseAction = gameplay.FindAction("Pause", true);
             resetAction = gameplay.FindAction("Reset", true);
             calibrationAction = gameplay.FindAction("ToggleCalibration", true);
@@ -58,6 +61,7 @@ namespace SpiderProjection.Runtime
             swingAction.performed += OnSwingPerformed;
             swingAction.canceled += OnSwingCanceled;
             rollAction.performed += _ => rollPressed = true;
+            shootAction.performed += _ => shootPressed = true;
             pauseAction.performed += _ => pausePressed = true;
             resetAction.performed += _ => resetPressed = true;
             calibrationAction.performed += _ => calibrationPressed = true;
@@ -116,6 +120,11 @@ namespace SpiderProjection.Runtime
         public bool ConsumeRollPressed()
         {
             return ConsumeFlag(ref rollPressed);
+        }
+
+        public bool ConsumeShootPressed()
+        {
+            return ConsumeFlag(ref shootPressed);
         }
 
         public bool ConsumePausePressed()

@@ -511,6 +511,13 @@ MonoBehaviour:
     m_Bits: 1536
   respawnDelay: 0.6
   respawnInvulnerability: 0.75
+  fallRespawnY: -7
+  maxHealth: 5
+  damageInvulnerability: 0.5
+  webShotPrefab: {fileID: 5789549141561616832, guid: 9eaab72fd4c11604a928f38495754105, type: 3}
+  shotSpeed: 14
+  shotCooldown: 0.3
+  shotAimRange: 14
 --- !u!82 &3040829983623677094
 AudioSource:
   m_ObjectHideFlags: 0
